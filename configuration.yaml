@@ -66,8 +66,9 @@ tts:
 # Cloud
 cloud:
 
-logs:
-  homeassistant.components.vacuum.xiaomi_miio: debug
+logger:
+  logs:
+    homeassistant.components.vacuum.xiaomi_miio: debug
 
 group: !include groups.yaml
 automation: !include automations.yaml
