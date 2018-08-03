@@ -2,3 +2,8 @@ configurator:
   title: Configurator
   icon: mdi:wrench
   url: http://hassio.local:3218/
+
+plex:
+  title: Plex
+  icon: mdi:plex
+  url: http://localhost:32400/
