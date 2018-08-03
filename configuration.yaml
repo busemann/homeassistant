@@ -76,4 +76,11 @@ vacuum:
   - platform: xiaomi_miio
     host: 192.168.1.157
     token: 71486f4b70526333313547776d373434
-    name: "Raymonds Roborock"
+    name: 'Raymonds Roborock'
+    sensors:
+    - state
+    - battery
+    - fanspeed
+    - clean_area
+    - clean_time
+    - error
