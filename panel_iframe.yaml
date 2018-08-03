@@ -7,3 +7,8 @@ plex:
   title: Plex
   icon: mdi:plex
   url: http://localhost:32400/
+
+sickrage:
+  title: SickRage
+  icon: mdi:plex
+  url: http://localhost:8888/home/
