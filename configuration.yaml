@@ -76,4 +76,4 @@ vacuum:
   - platform: xiaomi_miio
     host: 192.168.1.157
     token: 71486f4b70526333313547776d373434
-    name: Raymond's Roborock
+    name: "Raymonds Roborock"
