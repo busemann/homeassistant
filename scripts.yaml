@@ -11,10 +11,6 @@ vacuum_room_select:
           script.vacuum_living_room
         {% elif (room == "hallway") %}
           script.vacuum_hallway
-        {% elif (room == "dock") %}
-          script.vacuum_dock
-        {% elif (room == "stop") %}
-          script.vacuum_stop
         {% endif %}
 
 vacuum_kitchen_simple:
