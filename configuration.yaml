@@ -2,8 +2,8 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
-  latitude: 66.3193341
-  longitude: 14.2238351
+  latitude: !secret latitude
+  longitude: !secret longitude
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 50
   # metric for Metric, imperial for Imperial
@@ -66,6 +66,9 @@ tts:
 # Cloud
 cloud:
 
+ifttt:
+  key: !secret ifttt_key
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
@@ -74,8 +77,8 @@ panel_iframe: !include panel_iframe.yaml
 
 vacuum:
   - platform: xiaomi_miio
-    host: 192.168.1.157
-    token: 71486f4b70526333313547776d373434
+    host: !secret roborock_ip
+    token: !secret roborock_token
     name: 'Raymond-Roborock'
     sensors:
     - state

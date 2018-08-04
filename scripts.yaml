@@ -1,0 +1,44 @@
+vacuum_kitchen_simple:
+  alias: "Vacuum the kitchen"
+  sequence:
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.RaymondRoboRock
+      command: app_zoned_clean
+      params: [[22800, 29200, 23800, 32800, 1]]
+
+vacuum_kitchen:
+  alias: "Vacuum the kitchen"
+  sequence:
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.RaymondRoboRock
+      command: app_zoned_clean
+      params: [[22800, 29200, 24400, 32800, 1]]
+
+vacuum_main_bedrom:
+  alias: "Vacuum the main bedroom"
+  sequence:
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.RaymondRoboRock
+      command: app_zoned_clean
+      params: [[18800, 29200, 22000, 32600, 1]]
+
+vacuum_livingroom:
+  alias: "Vacuum the livingroom"
+  sequence:
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.RaymondRoboRock
+      command: app_zoned_clean
+      params: [[18800, 25200, 26000, 28900, 1]]
+
+vacuum_hallway:
+  alias: "Vacuum the hallway"
+  sequence:
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.RaymondRoboRock
+      command: app_zoned_clean
+      params: [[26200, 26700, 28800, 28900, 1], [27100, 29200, 28200, 34650, 1]]
