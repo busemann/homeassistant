@@ -31,7 +31,7 @@ vacuum_kitchen:
       command: app_zoned_clean
       params: [[22800, 29200, 24400, 32800, 1]]
 
-vacuum_bedrom:
+vacuum_bedroom:
   alias: "Vacuum the bedroom"
   sequence:
   - service: vacuum.send_command
