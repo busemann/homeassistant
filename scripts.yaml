@@ -13,6 +13,8 @@ vacuum_room_select:
           script.vacuum_hallway
         {% elif (room == "dock") %}
           script.vacuum_dock
+        {% elif (room == "stop") %}
+          script.vacuum_stop
         {% endif %}
 
 vacuum_kitchen_simple:
@@ -64,5 +66,12 @@ vacuum_dock:
   alias: "Vacuum dock"
   sequence:
   - service: vacuum.return_to_base
+    data:
+      entity_id: vacuum.RaymondRoboRock
+
+vacuum_stop:
+  alias: "Vacuum stop"
+  sequence:
+  - service: vacuum.stop
     data:
       entity_id: vacuum.RaymondRoboRock
