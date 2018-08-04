@@ -70,7 +70,7 @@ ifttt:
   key: !secret ifttt_key
 
 shell_command:
-  tv_channel : /config/samsungcli.py -c {{channel}} !secret samsung_tv_ip
+  tv_channel : samsungcli.py -c {{channel}} !secret samsung_tv_ip
 
 group: !include groups.yaml
 automation: !include automations.yaml
