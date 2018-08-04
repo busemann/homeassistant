@@ -53,7 +53,7 @@ config = {
     "description": "command line interface 4 samsung TV",
     "id": "tv",
     "host":  "",
-    "port": 55000,
+    "port": 8001,
     "method": "legacy",
     "timeout": 2,
 }
