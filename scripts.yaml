@@ -11,6 +11,8 @@ vacuum_room_select:
           script.vacuum_living_room
         {% elif (room == "hallway") %}
           script.vacuum_hallway
+        {% elif (room == "dock") %}
+          script.vacuum_dock
         {% endif %}
 
 vacuum_kitchen_simple:
@@ -57,3 +59,10 @@ vacuum_hallway:
       entity_id: vacuum.RaymondRoboRock
       command: app_zoned_clean
       params: [[26200, 26700, 28800, 28900, 1], [27100, 29200, 28200, 34650, 1]]
+
+vacuum_dock:
+  alias: "Vacuum dock"
+  sequence:
+  - service: vacuum.return_to_base
+    data:
+      entity_id: vacuum.RaymondRoboRock
