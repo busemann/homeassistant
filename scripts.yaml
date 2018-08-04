@@ -1,3 +1,18 @@
+vacuum_room_select:
+  sequence:
+  - service: script.turn_on
+    data_template:
+      entity_id: >
+        {% if (room == "kitchen") %}
+          script.vacuum_kitchen
+        {% elif (room == "bedroom") %}
+          script.vacuum_bedroom
+        {% elif (room == "living room") %}
+          script.vacuum_living_room
+        {% elif (room == "hallway") %}
+          script.vacuum_hallway
+        {% endif %}
+
 vacuum_kitchen_simple:
   alias: "Vacuum the kitchen"
   sequence:
@@ -16,8 +31,8 @@ vacuum_kitchen:
       command: app_zoned_clean
       params: [[22800, 29200, 24400, 32800, 1]]
 
-vacuum_main_bedrom:
-  alias: "Vacuum the main bedroom"
+vacuum_bedrom:
+  alias: "Vacuum the bedroom"
   sequence:
   - service: vacuum.send_command
     data:
@@ -25,8 +40,8 @@ vacuum_main_bedrom:
       command: app_zoned_clean
       params: [[18800, 29200, 22000, 32600, 1]]
 
-vacuum_livingroom:
-  alias: "Vacuum the livingroom"
+vacuum_living_room:
+  alias: "Vacuum the living room"
   sequence:
   - service: vacuum.send_command
     data:
