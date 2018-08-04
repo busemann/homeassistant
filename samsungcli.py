@@ -52,7 +52,7 @@ config = {
     "name": "samsungcli",
     "description": "command line interface 4 samsung TV",
     "id": "tv",
-    "host":  "",
+    "host":  "192.168.1.242",
     "port": 8001,
     "method": "legacy",
     "timeout": 2,
