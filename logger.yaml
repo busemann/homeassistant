@@ -1,3 +1,0 @@
-default: debug
-logs:
-  homeassistant.shell_command.tv_channel: debug
